@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Navbar } from 'react-bootstrap';
+
+
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   return (
+    <div className = "App">
+      <Navbar />
+      <h1>Error: {"errorMessage"}</h1>
+      <h1> Primer intento con React </h1>
+      <firstReactNavbar/>
+      <img src='loguitoPng'>loguito</img>
     </div>
   );
 }

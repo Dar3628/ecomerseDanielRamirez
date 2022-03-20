@@ -1,7 +1,8 @@
+import React from 'react'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar } from 'react-bootstrap';
-import {firstReactNavbar} from './Components/navbar/FirstReactNavbar';
+import Navbar from './Components/navbar/frstReactNavbar.js';
+
 
 
 
@@ -9,11 +10,10 @@ import {firstReactNavbar} from './Components/navbar/FirstReactNavbar';
 function App() {
    return (
     <div className = "App">
-      <firstReactNavbar />
+      <Navbar />
       <h1>Error: {"errorMessage"}</h1>
       <h1> Primer intento con React </h1>
-      <firstReactNavbar/>
-      <img src='loguitoPng'>loguito</img>
+      <img src='loguito.Png' alt = 'loguito'></img>
     </div>
   );
 }

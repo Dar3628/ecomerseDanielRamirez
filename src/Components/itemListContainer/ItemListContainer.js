@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import Item from "../item/Item";
+import react, { useState } from 'react'
 
 const items = [
     { id: '1', name: 'Iphone6', price:'11111'},
@@ -10,35 +9,35 @@ const items = [
 ];
 
 
-// const ItemListContainer = () => {
-//     const [selectedItem, setSelectedItem] = useState(null);
+const ItemListContainer = () => {
+    const [selectedItem, setSelectedItem] = useState(null);
 
-//     const otherFunction = () => {
-//         console.log("otherFunction");
-//     }
+    const otherFunction = () => {
+        console.log("otherFunction");
+    }
     
-//     return (
-//         <div>
-//             <h1>Lista de productos</h1>
-//             <h3>Producto seleccionado</h3>
-//             <p>{selectedItem ? selectedItem.name : 'Ninguno'}</p>
-//             <p>{selectedItem ? selectedItem.price : 'Ninguno'}</p>
-//             <p>{selectedItem ? selectedItem.id : 'Ninguno'}</p>
+    return (
+        <div>
+            <h1>Lista de productos</h1>
+            <h3>Producto seleccionado</h3>
+            <p>{selectedItem ? selectedItem.name : 'Ninguno'}</p>
+            <p>{selectedItem ? selectedItem.price : 'Ninguno'}</p>
+            <p>{selectedItem ? selectedItem.id : 'Ninguno'}</p>
 
-//             <hr />
-//             {items.map(({ id, name, price}) => (
-//                 <Item 
-//                     key={id}
-//                     id={id}
-//                     name={name}
-//                     price={price}
-//                     setSelectedItem={setSelectedItem}
-//                     otherFunction={otherFunction}
-//                 />
-//             ))}
-//         </div>
-//     );
-// };
+            <hr />
+            {items.map(({ id, name, price}) => (
+                <item 
+                    key={id}
+                    id={id}
+                    name={name}
+                    price={price}
+                    setSelectedItem={setSelectedItem}
+                    otherFunction={otherFunction}
+                />
+            ))}
+        </div>
+    );
+};
 
 
 

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React,{ useState } from "react";
 
 const Counter = ({stock}) => {
     const [counter, setCounter] = useState(0);

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const itemListContainer = [
+const items = [
     { id: '1', name: 'Iphone6', price:'11111'},
     { id: '2', name: 'Iphone6 plus', price:'22222'},
     { id: '3', name: 'Xiaomi redmi 9', price:'33333'},
@@ -10,7 +10,7 @@ const itemListContainer = [
 
 
 const ItemListContainer = () => {
-    const [selectedItem, setSelectedItem] = useState(null);
+    const [selectedItem] = useState(null);
 
     const otherFunction = () => {
         console.log("otherFunction");
@@ -25,16 +25,16 @@ const ItemListContainer = () => {
             <p>{selectedItem ? selectedItem.id : 'Ninguno'}</p>
 
             <hr />
-            {/* {Items.map(({ id, name, price}) => (
+            {items.map(({ id, name, price}) => (
                 <item 
                     key={id}
                     id={id}
                     name={name}
                     price={price}
-                    setSelectedItem={setSelectedItem}
+                    // setSelectedItem={setSelectedItem}
                     otherFunction={otherFunction}
                 />
-            ))} */}
+            ))}
         </div>
     );
 };

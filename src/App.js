@@ -1,5 +1,5 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import React, { useState } from 'react'
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './Components/navbar/frstReactNavbar.js';

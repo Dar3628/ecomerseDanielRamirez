@@ -1,6 +1,3 @@
-import { Component, Fragment } from "react";
-
-
 export class ClassComponent extends Component {
     constructor() {
         super();

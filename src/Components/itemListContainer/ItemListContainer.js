@@ -1,4 +1,4 @@
-import react, { useState } from 'react'
+import React, { useState } from 'react'
 
 const items = [
     { id: '1', name: 'Iphone6', price:'11111'},

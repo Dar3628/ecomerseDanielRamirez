@@ -1,8 +1,8 @@
-import { Fragment, useState } from "react"
+import { useState } from "react"
 
 const FuntionalComponent = ({name, age}) => {
-    const [stateName, setStateName] = useState("Juan");
-    const [surname, setSurname] = useState ("Pintos");
+    const [setStateName] = useState("Juan");
+    const [surname] = useState ("Pintos");
 
     const[user, setUser] = useState({
         name: "Juan",

@@ -1,12 +1,10 @@
 import React,{ useState } from "react";
-
-const Counter = ({stock}) => {
-    const [counter, setCounter] = useState(0);
+const Counter = ({stock, onAdd}) => {
+    const [counter, setCounter] = useState(1);
+    // stock = 10;
     const [currentTimes, setCurrentTimes] = useState(0);
-    const [currentDate, setCurrentDate] = useState("");
-
     const minusCounter = () => {
-        if(counter <= 0) return;
+        if(counter <= 1) return;
         setCounter(counter - 1);
     };
 
@@ -14,6 +12,8 @@ const Counter = ({stock}) => {
         if (counter >= stock) return;
         setCounter(counter + 1);
     };
+
+    
 
     const takeMe = () =>{
         setCurrentTimes(currentTimes + 1);
@@ -23,10 +23,13 @@ const Counter = ({stock}) => {
     return (
         <>
             <div>
-                <h3>{currentDate}</h3>
+                {/* <h3>{currentDate}</h3> */}
                 <button onClick={minusCounter}>-</button>
                 <span>{counter}</span>
                 <button onClick={plusCounter}>+</button>
+            </div>
+            <div>
+                <button onClick={() => onAdd(counter)}>Add</button>
             </div>
             <button onClick={takeMe}>Presioname</button>
             <h3>Cantidad de veces que fui presionado: {currentTimes}</h3>

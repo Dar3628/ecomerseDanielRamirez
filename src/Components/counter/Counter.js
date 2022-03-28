@@ -1,8 +1,10 @@
 import React,{ useState } from "react";
+// import Item from './item/Item';
+
+
 const Counter = ({stock, onAdd}) => {
     const [counter, setCounter] = useState(1);
-    // stock = 10;
-    const [currentTimes, setCurrentTimes] = useState(0);
+    
     const minusCounter = () => {
         if(counter <= 1) return;
         setCounter(counter - 1);
@@ -15,10 +17,10 @@ const Counter = ({stock, onAdd}) => {
 
     
 
-    const takeMe = () =>{
-        setCurrentTimes(currentTimes + 1);
+    // const takeMe = () =>{
+    //     setCurrentTimes(currentTimes + 1);
         
-    };
+    // };
 
     return (
         <>
@@ -31,8 +33,8 @@ const Counter = ({stock, onAdd}) => {
             <div>
                 <button onClick={() => onAdd(counter)}>Add</button>
             </div>
-            <button onClick={takeMe}>Presioname</button>
-            <h3>Cantidad de veces que fui presionado: {currentTimes}</h3>
+            {/* <button onClick={takeMe}>Presioname</button>
+            <h3>Cantidad de veces que fui presionado: {currentTimes}</h3> */}
         </>
     )
 

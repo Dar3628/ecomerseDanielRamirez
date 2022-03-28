@@ -1,7 +1,9 @@
 import Counter from "../counter/Counter";
 
-const Item = ({name, price, id, setSelectedItem, otherFunction}) => {
-const selectItem = () => setSelectedItem ({name, price, id });
+
+
+const Item = ({name, price, id, stock, setSelectedItem, otherFunction}) => {
+    const selectItem = () => setSelectedItem ({name, price, id, stock});
 
     return (
         <div>
@@ -13,7 +15,7 @@ const selectItem = () => setSelectedItem ({name, price, id });
             <button onClick={otherFunction}>
                 Imprimir en consola
             </button>
-            <Counter stock={10} />
+            <Counter stock={stock} />
             <hr />
         </div>    
     )
@@ -21,8 +23,6 @@ const selectItem = () => setSelectedItem ({name, price, id });
    
 };
 
-Item.propTypes = {
 
-}
 
-export default Item
+export default Item;

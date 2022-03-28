@@ -1,44 +1,54 @@
-import React, { useState } from 'react'
-
-const items = [
-    { id: '1', name: 'Iphone6', price:'11111'},
-    { id: '2', name: 'Iphone6 plus', price:'22222'},
-    { id: '3', name: 'Xiaomi redmi 9', price:'33333'},
-    { id: '4', name: 'Samsung A5', price:'44444'},
-    { id: '5', name: 'Motorola c115', price:'55555'},
-];
+import { useState } from 'react';
+import { Col, Row } from 'react-bootstrap';
+import Card from 'react-bootstrap/Card';
+import Item from '../item/Item';
+import items from '../itemList/ItemList';
+// import Counter from './counter/Counter';
 
 
 const ItemListContainer = () => {
     const [selectedItem] = useState(null);
-
-    const otherFunction = () => {
-        console.log("otherFunction");
-    }
     
-    return (
-        <div>
-            <h1>Lista de productos</h1>
-            <h3>Producto seleccionado</h3>
-            <p>{selectedItem ? selectedItem.name : 'Ninguno'}</p>
-            <p>{selectedItem ? selectedItem.price : 'Ninguno'}</p>
-            <p>{selectedItem ? selectedItem.id : 'Ninguno'}</p>
+    const otherFunction = () => {
+        console.log({items:items.name});
+    }
 
-            <hr />
-            {items.map(({ id, name, price}) => (
-                <item 
-                    key={id}
-                    id={id}
-                    name={name}
-                    price={price}
-                    // setSelectedItem={setSelectedItem}
-                    otherFunction={otherFunction}
-                />
-            ))}
-        </div>
-    );
+    return (
+        <container>
+            <Row sm->
+                
+                    <Col>   
+                        {items.map(({ id, name, price}) => (
+                            <Card>
+                                <Card.Img variant="top" src="holder.js/60px120" />
+                                <Card.Body>
+                                    <Card.Title></Card.Title>
+                                    <Item 
+                                        key={id}
+                                        id={id}
+                                        name={name}
+                                        price={price}
+                                        selectedItem={selectedItem}
+                                        otherFunction={otherFunction}
+                                    />
+                                </Card.Body>
+                                    <Card.Footer>
+                                        <small className="text-muted">Last updated 3 mins ago</small>
+                                    </Card.Footer>
+                            </Card>
+                        ))}
+                            
+                        
+                        
+                    </Col>    
+                
+            </Row>
+        </container>    
+    )
+
+   
 };
 
 
 
-export default ItemListContainer
+export default ItemListContainer;

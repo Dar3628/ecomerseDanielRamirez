@@ -3,6 +3,7 @@ import React,{ useState } from "react";
 
 
 const Counter = ({stock, onAdd}) => {
+
     const [counter, setCounter] = useState(1);
     
     const minusCounter = () => {

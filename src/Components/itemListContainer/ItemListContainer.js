@@ -9,18 +9,18 @@ import items from '../itemList/ItemList';
 const ItemListContainer = () => {
     const [selectedItem] = useState(null);
     
-    const otherFunction = () => {
-        console.log({items:items.name});
+   const otherFunction = () => {
+         setTimeout(console.log({...items.name}), 1000);
     }
 
     return (
         <container>
-            <Row sm->
+            <Row xs={1} md={2} className="g-4">
                 
-                    <Col>   
-                        {items.map(({ id, name, price}) => (
+                    {items.map(({ id, name, price, stock}) => (
+                        <Col>   
                             <Card>
-                                <Card.Img variant="top" src="holder.js/60px120" />
+                                {/* <Card.Img variant="top" src="holder.js/60px120" /> */}
                                 <Card.Body>
                                     <Card.Title></Card.Title>
                                     <Item 
@@ -28,6 +28,7 @@ const ItemListContainer = () => {
                                         id={id}
                                         name={name}
                                         price={price}
+                                        stock={stock}
                                         selectedItem={selectedItem}
                                         otherFunction={otherFunction}
                                     />
@@ -36,11 +37,11 @@ const ItemListContainer = () => {
                                         <small className="text-muted">Last updated 3 mins ago</small>
                                     </Card.Footer>
                             </Card>
-                        ))}
+                        </Col>    
+                    ))}
                             
                         
                         
-                    </Col>    
                 
             </Row>
         </container>    

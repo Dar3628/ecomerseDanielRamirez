@@ -2,9 +2,12 @@ import Counter from "../counter/Counter";
 
 
 
-const Item = ({name, price, id, stock, setSelectedItem, otherFunction}) => {
+const Item = ({name, price, id, stock, setSelectedItem}) => {
     const selectItem = () => setSelectedItem ({name, price, id, stock});
-
+    let otherFunction = () => {
+        setTimeout(() => console.log({name}),2000);
+    }
+  
     return (
         <div>
             <h2> Nombre del producto : {name} </h2>

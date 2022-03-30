@@ -1,21 +1,20 @@
+import { Button } from "react-bootstrap";
 import Counter from "../counter/Counter";
 
 
 
-const Item = ({name, price, id, stock, setSelectedItem}) => {
-    const selectItem = () => setSelectedItem ({name, price, id, stock});
-    let otherFunction = () => {
-        setTimeout(() => console.log({name}),2000);
-    }
+const Item = ({name, price, id, stock, setSelectedItem, otherFunction}) => {
+    const selectItem = () => setSelectedItem ({ id});
+    let otherFunction2 = () => otherFunction ({name});
   
     return (
         <div>
             <h2> Nombre del producto : {name} </h2>
             <h2> Precio del producto : {price} </h2>
-            <button onClick={ selectItem}>
+            <Button variant="primary" onClick={ selectItem}>
                 Seleccionar producto
-            </button>
-            <button onClick={otherFunction}>
+            </Button>
+            <button onClick={otherFunction2}>
                 Imprimir en consola
             </button>
             <Counter stock={stock} />

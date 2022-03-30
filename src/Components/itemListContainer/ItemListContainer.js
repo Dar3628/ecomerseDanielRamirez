@@ -7,10 +7,11 @@ import items from '../itemList/ItemList';
 
 
 const ItemListContainer = () => {
-    const [selectedItem] = useState(null);
+    const [selectedItem, setSelItem] = useState(null);
     
-   const otherFunction = () => {
+    const otherFunction = (name) => {
          setTimeout(console.log({...items.name}), 1000);
+         console.log(name);
     }
 
     return (
@@ -29,9 +30,10 @@ const ItemListContainer = () => {
                                         name={name}
                                         price={price}
                                         stock={stock}
-                                        selectedItem={selectedItem}
+                                        setSelectedItem={setSelItem}
                                         otherFunction={otherFunction}
                                     />
+                                    {console.log(selectedItem)};
                                 </Card.Body>
                                     <Card.Footer>
                                         <small className="text-muted">Last updated 3 mins ago</small>

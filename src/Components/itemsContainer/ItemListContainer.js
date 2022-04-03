@@ -3,7 +3,7 @@ import { Col, Row } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import Item from '../item/Item';
 import items from '../itemList/ItemList';
-// import Counter from './counter/Counter';
+//import Counter from './counter/Counter';
 
 
 const ItemListContainer = () => {
@@ -16,13 +16,13 @@ const ItemListContainer = () => {
 
     return (
         <container>
-            <Row xs={1} md={2} className="g-4">
+            <Row xs={1} md={'auto'} className="g-4">
                 
                     {items.map(({ id, name, price, stock}) => (
-                        <Col>   
-                            <Card>
-                                {/* <Card.Img variant="top" src="holder.js/60px120" /> */}
-                                <Card.Body>
+                        <Col >   
+                            <Card style={{width:'15rem'}}>
+                                <Card.Img variant="top" src="holder.js/60px120" />
+                                <Card.Body className="card-body">
                                     <Card.Title></Card.Title>
                                     <Item 
                                         key={id}

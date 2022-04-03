@@ -9,14 +9,16 @@ const Item = ({name, price, id, stock, setSelectedItem, otherFunction}) => {
   
     return (
         <div>
-            <h2> Nombre del producto : {name} </h2>
-            <h2> Precio del producto : {price} </h2>
-            <Button variant="primary" onClick={ selectItem}>
-                Seleccionar producto
+            
+            <h5> Producto : <td/> {name} </h5>
+            <h5> Precio : <td/> {price} </h5>
+            <Button className="me-2" variant="primary" onClick={ selectItem}>
+                Seleccionar
             </Button>
-            <button onClick={otherFunction2}>
-                Imprimir en consola
-            </button>
+            
+            <Button className="me-2" variant="primary" onClick={otherFunction2}>
+                print consola
+            </Button>
             <Counter stock={stock} />
             <hr />
         </div>    

@@ -32,7 +32,7 @@ const Counter = ({stock, onAdd}) => {
                 <button onClick={plusCounter}>+</button>
             </div>
             <div>
-                <button onClick={() => onAdd(counter)}>Add</button>
+                <button className="bottom" onClick={() => onAdd(counter)}>Add</button>
             </div>
             {/* <button onClick={takeMe}>Presioname</button>
             <h3>Cantidad de veces que fui presionado: {currentTimes}</h3> */}
